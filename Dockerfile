@@ -22,7 +22,10 @@ RUN mkdir /smashing && \
     ln -s /smashing/config/config.ru /smashing/config.ru && \
     ln -s /smashing/config /config
 
+COPY Gemfile /smashing
+
 COPY run.sh /
+
 
 VOLUME ["/dashboards", "/jobs", "/lib-smashing", "/config", "/public", "/widgets", "/assets"]
 
